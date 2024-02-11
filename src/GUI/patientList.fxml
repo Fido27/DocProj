@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button layoutX="447.0" layoutY="39.0" mnemonicParsing="false" text="Search" />
-      <TextField layoutX="175.0" layoutY="39.0" prefHeight="27.0" prefWidth="240.0" />
-      <ListView layoutX="175.0" layoutY="100.0" prefHeight="208.0" prefWidth="240.0" />
+      <Button layoutX="389.0" layoutY="86.0" mnemonicParsing="false" text="Search" />
+      <TextField layoutX="111.0" layoutY="86.0" prefHeight="27.0" prefWidth="240.0" />
+      <ListView layoutX="111.0" layoutY="132.0" prefHeight="208.0" prefWidth="240.0" />
+      <Label layoutX="111.0" layoutY="58.0" text="Search Patient List:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="41.0" fitWidth="127.0" layoutX="237.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo.jpeg" />
+         </image>
+      </ImageView>
    </children>
 </Pane>
