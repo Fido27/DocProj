@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="47.0" layoutY="32.0" text="Patient's Name">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="47.0" layoutY="82.0" text="Height" />
+      <TextField layoutX="139.0" layoutY="77.0" />
+      <TextField layoutX="139.0" layoutY="117.0" />
+      <Label layoutX="47.0" layoutY="122.0" text="Weight" />
+      <TextField layoutX="139.0" layoutY="159.0" />
+      <Label layoutX="47.0" layoutY="164.0" text="Blood Pressure" />
+      <Label layoutX="47.0" layoutY="205.0" text="Allergies" />
+      <TextArea layoutX="139.0" layoutY="200.0" prefHeight="161.0" prefWidth="160.0" />
+   </children>
+</Pane>

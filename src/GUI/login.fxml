@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField layoutX="220.0" layoutY="173.0" />
+      <TextField layoutX="220.0" layoutY="214.0" />
+      <Button layoutX="273.0" layoutY="259.0" mnemonicParsing="false" text="Login" />
+      <Label layoutX="250.0" layoutY="139.0" text="YourHealth">
+         <font>
+            <Font size="21.0" />
+         </font></Label>
+      <ImageView fitHeight="112.0" fitWidth="106.0" layoutX="247.0" layoutY="27.0">
+         <image>
+            <Image url="@../../../../../Desktop/Screenshot%202024-02-04%20at%201.27.55%E2%80%AFPM.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="231.0" layoutY="299.0" mnemonicParsing="false" text="Create a new Account" />
+   </children>
+</Pane>
