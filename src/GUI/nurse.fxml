@@ -44,7 +44,7 @@
       <Button layoutX="446.0" layoutY="307.0" mnemonicParsing="false" text="Send to Physician" />
       <ImageView fitHeight="27.0" fitWidth="115.0" layoutX="252.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../private/var/folders/fr/y1tlyjn92sn5pxz8smlpt6pc0000gn/T/com.apple.Photos.NSItemProvider/version=1&amp;uuid=F85E8B79-DE34-4ECD-B942-7B796A7EFEC5&amp;mode=compatible&amp;noloc=0.png/0590B9BD-B801-4C0F-965A-5DF57B5047CB.png" />
+            <Image url="@logo.jpeg" />
          </image>
       </ImageView>
    </children>
