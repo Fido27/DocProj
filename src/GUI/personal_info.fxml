@@ -8,11 +8,6 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="19.0" layoutY="30.0" text="Personal Information">
-         <font>
-            <Font size="22.0" />
-         </font>
-      </Label>
       <Button fx:id="saveAccountButton" layoutX="442.0" layoutY="334.0" mnemonicParsing="false" onAction="#savePatientInfo" text="Save Account" />
       <Label layoutX="19.0" layoutY="82.0" text="First Name" />
       <TextField fx:id="firstName" layoutX="93.0" layoutY="77.0" prefHeight="27.0" prefWidth="110.0" />
@@ -41,5 +36,7 @@
             <Image url="@logo.jpeg" />
          </image>
       </ImageView>
+      <Label fx:id="patientIDLabel" layoutX="25.0" layoutY="339.0" text="Patient ID:" />
+      <TextField layoutX="93.0" layoutY="334.0" />
    </children>
 </Pane>
