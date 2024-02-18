@@ -39,9 +39,8 @@
             <Font size="17.0" />
          </font>
       </Label>
-      <Button layoutX="273.0" layoutY="307.0" mnemonicParsing="false" text="Save to files" />
-      <Button layoutX="378.0" layoutY="307.0" mnemonicParsing="false" text="Clear" />
-      <Button layoutX="446.0" layoutY="307.0" mnemonicParsing="false" text="Send to Physician" />
+      <Button layoutX="454.0" layoutY="307.0" mnemonicParsing="false" text="Save to files" />
+      <Button layoutX="356.0" layoutY="307.0" mnemonicParsing="false" text="Clear" />
       <ImageView fitHeight="27.0" fitWidth="115.0" layoutX="252.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@logo.jpeg" />
