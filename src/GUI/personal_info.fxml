@@ -13,9 +13,9 @@
             <Font size="22.0" />
          </font>
       </Label>
-      <Button layoutX="442.0" layoutY="334.0" mnemonicParsing="false" text="Save Account" />
+      <Button fx:id="saveAccountButton" layoutX="442.0" layoutY="334.0" mnemonicParsing="false" text="Save Account" />
       <Label layoutX="19.0" layoutY="82.0" text="First Name" />
-      <TextField layoutX="93.0" layoutY="77.0" prefHeight="27.0" prefWidth="110.0" />
+      <TextField fx:id="first_name" layoutX="93.0" layoutY="77.0" prefHeight="27.0" prefWidth="110.0" />
       <TextField layoutX="257.0" layoutY="77.0" prefHeight="27.0" prefWidth="59.0" />
       <Label layoutX="220.0" layoutY="82.0" text="M.I." />
       <TextField layoutX="412.0" layoutY="77.0" prefHeight="27.0" prefWidth="110.0" />
