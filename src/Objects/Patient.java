@@ -1,5 +1,12 @@
 package Objects;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
+
 public class Patient extends User{
     String firstName;
     String mInitial;
@@ -148,5 +155,77 @@ public class Patient extends User{
 
     public Patient(String username) {
         super(username);
+    }
+
+    public void saveToFile() {
+        String filePath = "src/Objects/Patients/" + getUserID() + ".txt";
+        Path path = Path.of(filePath);
+        File file = new File(filePath);
+        String text = "" + 
+                        firstName + "\n" +
+                        mInitial + "\n" + 
+                        lastName + "\n" +
+                        phoneNo + "\n" +
+                        birthDate + "\n" +
+                        address + "\n" +
+                        allergies + "\n" +
+                        insuranceCompany + "\n" +
+                        insuranceNumber + "\n" +
+                        emergencyContact + "\n" +
+                        emergencyContactName + "\n" +
+                        height + "\n" +
+                        weight + "\n" +
+                        bodyTemp + "\n" +
+                        bloodPressure + "\n" +
+                        aboveTwelve + "\n";
+
+        try {
+            file.createNewFile();
+            Files.writeString(path, text);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // public void readFromFile() {
+    //     File filePath = new File("./Patients/");
+    //     File[] listingAllFiles = filePath.listFiles();
+
+    //     for (File file : listingAllFiles) {
+    //         if(file != null) {
+    //             String fileName = file.getName();
+    //             this.ID = fileName;
+
+                
+                
+    //         }
+    //     }
+    // }
+
+    public void readFromFile(String filePath) {
+        try {
+			List<String> allLines = Files.readAllLines(Paths.get(filePath));
+
+            setFirstName(allLines.get(0));
+            setMInitial(allLines.get(1));
+            setLastName(allLines.get(2));
+            setPhoneNo(allLines.get(3));
+            setBirthDate(allLines.get(4));
+            setAddress(allLines.get(5));
+            setAllergies(allLines.get(6));
+            setInsuranceCompany(allLines.get(7));
+            setInsuranceNumber(allLines.get(8));
+            setEmergencyContact(allLines.get(9));
+            setEmergencyContactName(allLines.get(10));
+            setHeight(allLines.get(11));
+            setWeight(allLines.get(12));
+            setBodyTemp(allLines.get(13));
+            setBloodPressure(allLines.get(14));
+            if (allLines.get(15).startsWith("f")) setAboveTwelve(false);
+            else setAboveTwelve(true);
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
     }
 }

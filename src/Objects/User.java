@@ -1,20 +1,22 @@
 package Objects;
+
+enum TYPE {PATIENT, NURSE , DOCTOR}
+
 public class User {
-    static enum TYPE {PATIENT, NURSE , DOCTOR}
-    String username;
-    User.TYPE TYPE;
+    String ID;
+    TYPE TYPE;
 
     public User(TYPE usertype , String username) {
         this.TYPE = usertype;
-        this.username = username;
+        this.ID = username;
     }
 
-    public User(String username) {
-        this.TYPE = TYPE.PATIENT;
-        this.username = username;
+    protected User(String username) {
+        this.TYPE = Objects.TYPE.PATIENT;
+        this.ID = username;
     }
 
-    protected String getUsername() {
-        return username;
+    public String getUserID() {
+        return ID;
     }
 }
