@@ -9,7 +9,7 @@ public class App extends Application {
     @Override
     public void start(Stage stage) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("./GUI/personal_info.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("./GUI/nurse.fxml"));
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
@@ -17,7 +17,7 @@ public class App extends Application {
         } catch(Exception e) {
             e.printStackTrace();
         }
-    } 
+    }
 
     public static void main(String[] args) {
         launch(args);

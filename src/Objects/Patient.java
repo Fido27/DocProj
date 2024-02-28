@@ -188,6 +188,7 @@ public class Patient extends User{
     }
 
     // public void readFromFile() {
+    //      String filePath = "src/Objects/Patients/" + getUserID() + ".txt";
     //     File filePath = new File("./Patients/");
     //     File[] listingAllFiles = filePath.listFiles();
 
@@ -202,8 +203,9 @@ public class Patient extends User{
     //     }
     // }
 
-    public void readFromFile(String filePath) {
+    public void readFromFile() {
         try {
+            String filePath = "src/Objects/Patients/" + getUserID() + ".txt";
 			List<String> allLines = Files.readAllLines(Paths.get(filePath));
 
             setFirstName(allLines.get(0));
