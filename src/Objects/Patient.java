@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Patient extends User{
@@ -24,6 +25,7 @@ public class Patient extends User{
     String bodyTemp;
     String bloodPressure;
     boolean aboveTwelve;
+    ArrayList<Message> conversation;
 
     public String getFirstName() {
         return this.lastName;
@@ -155,6 +157,14 @@ public class Patient extends User{
 
     public Patient(String username) {
         super(username);
+    }
+
+    public void sendMessage(String content, String sender) {
+        Message msg = new Message();
+        msg.setSender(sender);
+        msg.setContent(content);
+        msg.setTime("This is the time now");
+        conversation.addLast(msg);
     }
 
     public void saveToFile() {

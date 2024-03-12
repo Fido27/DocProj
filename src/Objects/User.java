@@ -1,18 +1,16 @@
 package Objects;
 
-enum TYPE {PATIENT, NURSE , DOCTOR}
-
 public class User {
     String ID;
-    TYPE TYPE;
+    USERTYPE USERTYPE;
 
-    public User(TYPE usertype , String username) {
-        this.TYPE = usertype;
+    public User(USERTYPE usertype , String username) {
+        this.USERTYPE = usertype;
         this.ID = username;
     }
 
     protected User(String username) {
-        this.TYPE = Objects.TYPE.PATIENT;
+        this.USERTYPE = Objects.USERTYPE.PATIENT;
         this.ID = username;
     }
 

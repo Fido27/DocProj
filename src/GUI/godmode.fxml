@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.godController">
+   <children>
+      <Button fx:id="signup" layoutX="97.0" layoutY="88.0" mnemonicParsing="false" onAction="#showSignup" text="signup" />
+      <Button fx:id="patient" layoutX="230.0" layoutY="88.0" mnemonicParsing="false" onAction="#showPatientView" text="patient" />
+      <Button fx:id="personalinfo" layoutX="398.0" layoutY="88.0" mnemonicParsing="false" onAction="#showInfoPage" text="personalinfo" />
+      <Button fx:id="nurse" layoutX="97.0" layoutY="200.0" mnemonicParsing="false" onAction="#showNurseView" text="nurse" />
+      <Button fx:id="doctor" layoutX="230.0" layoutY="200.0" mnemonicParsing="false" onAction="#showDocView" text="doctor" />
+      <Button fx:id="patientlist" layoutX="398.0" layoutY="200.0" mnemonicParsing="false" onAction="#showListView" text="patientlist" />
+   </children>
+</Pane>

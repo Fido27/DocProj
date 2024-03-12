@@ -9,10 +9,12 @@ public class App extends Application {
     @Override
     public void start(Stage stage) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("./GUI/nurse.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("./GUI/godmode.fxml"));
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
+            System.out.println("Working Directory = " + System.getProperty("user.dir"));
+
         
         } catch(Exception e) {
             e.printStackTrace();
