@@ -32,52 +32,49 @@ public class godController {
 
     @FXML
     void showSignup(ActionEvent event) {
-        // try {
-        //     Parent root = FXMLLoader.load(getClass().getResource("./GUI/nurse.fxml"));
-        //     Scene scene = new Scene(root);
-        //     stage.setScene(scene);
-        //     stage.show();
-        
-        // } catch(Exception e) {
-        //     e.printStackTrace();
-        // }
+        Parent mainCallWindowFXML;
+        try {
+            mainCallWindowFXML = FXMLLoader.load(getClass().getResource("/GUI/personal_info.fxml"));
+            Stage stage = (Stage) nurse.getScene().getWindow();
+            stage.setScene(new Scene(mainCallWindowFXML));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
     void showPatientView(ActionEvent event) {
-        //   try
-        // {
-        //     FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("LoginScreen.fxml"));
-        //     Parent root = (Parent)fxmlLoader.load();
-        //     LoginScreenController loginScreenController = fxmlLoader.<LoginScreenController>getController();
-        //     loginScreenController.setHashMap(usersInfo);
-        //     Scene scene = new Scene(root);
-        //     Stage stage = new Stage();
-        //     stage.setTitle("Login Screen");
-        //     stage.setScene(scene);
-        //     stage.show();            
-            
-        //     ((Node)(event.getSource())).getScene().getWindow().hide(); //close current window after opening new Scene           
-        // }
-        // catch (IOException ex)
-        // {
-        //     Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
-        // }
+        Parent mainCallWindowFXML;
+        try {
+            mainCallWindowFXML = FXMLLoader.load(getClass().getResource("/GUI/patient.fxml"));
+            Stage stage = (Stage) nurse.getScene().getWindow();
+            stage.setScene(new Scene(mainCallWindowFXML));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
     void showInfoPage(ActionEvent event) {
-
+        Parent mainCallWindowFXML;
+        try {
+            mainCallWindowFXML = FXMLLoader.load(getClass().getResource("/GUI/personal_info.fxml"));
+            Stage stage = (Stage) nurse.getScene().getWindow();
+            stage.setScene(new Scene(mainCallWindowFXML));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
     void showNurseView(ActionEvent event) {
         Parent mainCallWindowFXML;
-        System.out.println("Working Directory = " + System.getProperty("user.dir"));
         try {
-            mainCallWindowFXML = FXMLLoader.load(getClass().getResource("/Users/fido/Documents/ASU/Spring 2024/CSE 360/DocProj/src/GUI/nurse.fxml"));
-            System.out.println("Working Directory = " + System.getProperty("user.dir"));
-            Stage stage = (Stage) personalinfo.getScene().getWindow();
+            mainCallWindowFXML = FXMLLoader.load(getClass().getResource("/GUI/nurse.fxml"));
+            Stage stage = (Stage) nurse.getScene().getWindow();
             stage.setScene(new Scene(mainCallWindowFXML));
             stage.show();
         } catch (IOException e) {
@@ -87,12 +84,28 @@ public class godController {
 
     @FXML
     void showDocView(ActionEvent event) {
-
+        Parent mainCallWindowFXML;
+        try {
+            mainCallWindowFXML = FXMLLoader.load(getClass().getResource("/GUI/doctor_view.fxml"));
+            Stage stage = (Stage) nurse.getScene().getWindow();
+            stage.setScene(new Scene(mainCallWindowFXML));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
     void showListView(ActionEvent event) {
-
+        Parent mainCallWindowFXML;
+        try {
+            mainCallWindowFXML = FXMLLoader.load(getClass().getResource("/GUI/patientList.fxml"));
+            Stage stage = (Stage) nurse.getScene().getWindow();
+            stage.setScene(new Scene(mainCallWindowFXML));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }

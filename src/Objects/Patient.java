@@ -26,6 +26,7 @@ public class Patient extends User{
     String bloodPressure;
     boolean aboveTwelve;
     ArrayList<Message> conversation;
+    String prescription;
 
     public String getFirstName() {
         return this.lastName;
@@ -188,6 +189,7 @@ public class Patient extends User{
                         bodyTemp + "\n" +
                         bloodPressure + "\n" +
                         aboveTwelve + "\n";
+                        // TODO - add conversation
 
         try {
             file.createNewFile();

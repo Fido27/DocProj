@@ -32,7 +32,12 @@ public class loginPageController {
 		if (doctorLoginRadio.isSelected()) {
 			User doc = new User(Objects.USERTYPE.DOCTOR, "doc");
 			MainController.setLoggedInUser(doc);
-		}
+			// TODO - show doc view
+		} else if (nurseLoginRadio.isSelected()) {
+			User nurse = new User(Objects.USERTYPE.NURSE, "nurse");
+			MainController.setLoggedInUser(nurse);
+			// TODO - show nurse view
+		} 
 		String enteredID = userID.getText();
 	}
 

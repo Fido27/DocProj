@@ -1,9 +1,10 @@
-import Objects.User.TYPE;
-
 package Objects;
+
+import Objects.USERTYPE;
+
 public class Nurse extends User{
 
-    public Nurse(User.TYPE usertype, String username, String password) {
+    public Nurse(Objects.USERTYPE usertype, String username, String password) {
         super(usertype, username, password);
         //TODO Auto-generated constructor stub
     }
