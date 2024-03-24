@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "App.App",
+            "projectName": "DocProj_e564323e"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}",
@@ -19,6 +26,5 @@
             "projectName": "DocProj_e564323e",
             "vmArgs": "--module-path \"/Users/fido/Library/JavaFX/lib\" --add-modules javafx.controls,javafx.fxml"
         }
-
     ]
 }
