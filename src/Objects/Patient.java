@@ -29,7 +29,7 @@ public class Patient extends User{
     String prescription;
 
     public String getFirstName() {
-        return this.lastName;
+        return this.firstName;
     }
 
     public void setFirstName(String firstName) {
