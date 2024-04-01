@@ -1,4 +1,4 @@
-package Objects;
+package objects;
 
 public class User {
     String ID;
@@ -10,7 +10,7 @@ public class User {
     }
 
     protected User(String username) {
-        this.USERTYPE = Objects.USERTYPE.PATIENT;
+        this.USERTYPE = objects.USERTYPE.PATIENT;
         this.ID = username;
     }
 

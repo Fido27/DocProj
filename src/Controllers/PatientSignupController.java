@@ -1,6 +1,6 @@
-package Controllers;
+package controllers;
 
-import Objects.Patient;
+import objects.Patient;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
