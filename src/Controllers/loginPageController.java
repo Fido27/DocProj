@@ -1,6 +1,6 @@
-package controllers;
+package Controllers;
 
-import objects.User;
+import Objects.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -30,11 +30,11 @@ public class loginPageController {
 	@FXML
 	void loginButtonPressed(ActionEvent event) {
 		if (doctorLoginRadio.isSelected()) {
-			User doc = new User(objects.USERTYPE.DOCTOR, "doc");
+			User doc = new User(Objects.USERTYPE.DOCTOR, "doc");
 			MainController.setLoggedInUser(doc);
 			// TODO - show doc view
 		} else if (nurseLoginRadio.isSelected()) {
-			User nurse = new User(objects.USERTYPE.NURSE, "nurse");
+			User nurse = new User(Objects.USERTYPE.NURSE, "nurse");
 			MainController.setLoggedInUser(nurse);
 			// TODO - show nurse view
 		} 

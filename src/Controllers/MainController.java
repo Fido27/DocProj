@@ -1,7 +1,7 @@
-package controllers;
+package Controllers;
 
-import objects.Patient;
-import objects.User;
+import Objects.Patient;
+import Objects.User;
 
 public class MainController {
     static User loggedInUser;
