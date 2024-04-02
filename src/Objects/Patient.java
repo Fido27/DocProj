@@ -165,7 +165,7 @@ public class Patient extends User{
         msg.setSender(sender);
         msg.setContent(content);
         msg.setTime("This is the time now");
-        conversation.addLast(msg);
+        //conversation.addLast(msg);
     }
 
     public void saveToFile() {
