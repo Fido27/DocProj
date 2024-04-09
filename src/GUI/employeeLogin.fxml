@@ -13,7 +13,7 @@
       <TextField layoutX="109.0" layoutY="77.0" onAction="#firstNameChanged" prefHeight="27.0" prefWidth="160.0" />
       <TextField layoutX="396.0" layoutY="77.0" onInputMethodTextChanged="#lastNameChanged" prefHeight="27.0" prefWidth="160.0" />
       <Label layoutX="282.0" layoutY="82.0" prefHeight="17.0" prefWidth="74.0" text="Last Name:" />
-      <ImageView fitHeight="27.0" fitWidth="132.0" layoutX="278.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="27.0" fitWidth="132.0" layoutX="237.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@logo.jpeg" />
          </image>
