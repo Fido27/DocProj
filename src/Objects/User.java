@@ -14,6 +14,10 @@ public class User {
         this.ID = username;
     }
 
+    public USERTYPE getUSERTYPE() {
+        return this.USERTYPE;
+    }
+
     public String getUserID() {
         return ID;
     }
