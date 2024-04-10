@@ -1,11 +1,13 @@
 package Controllers;
 
 import Objects.Patient;
+import Objects.USERTYPE;
 import Objects.User;
 
 public class MainController {
-    static User loggedInUser;
-    static Patient patientInQuestion;
+    public static User loggedInUser;
+    public static Patient patientInQuestion;
+    public static USERTYPE userInQuestion;
 
     public User getLoggedInUser() {
         return MainController.loggedInUser;
@@ -24,3 +26,6 @@ public class MainController {
     }
 
 }
+
+// TODO - Visit Notes
+// TODO - err if all texboxes are not filled

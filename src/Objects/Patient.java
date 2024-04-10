@@ -5,8 +5,12 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+
+import Controllers.MainController;
 
 public class Patient extends User{
     String firstName;
@@ -25,7 +29,8 @@ public class Patient extends User{
     String bodyTemp;
     String bloodPressure;
     boolean aboveTwelve;
-    ArrayList<Message> conversation;
+    public ArrayList<Message> conversation = new ArrayList<>();
+    public ArrayList<Visit> visitSummaries = new ArrayList<>();
     String prescription;
 
     public String getFirstName() {
@@ -157,19 +162,26 @@ public class Patient extends User{
     }
 
     public Patient(String username) {
-        super(username);
+        super(Objects.USERTYPE.PATIENT , username);
+        try {
+            readFromFile();
+        } catch (Exception e) {
+            System.out.println("No data found");
+        }
     }
 
-    public void sendMessage(String content, String sender) {
-        Message msg = new Message();
-        msg.setSender(sender);
-        msg.setContent(content);
-        msg.setTime("This is the time now");
-        //conversation.addLast(msg);
+    public void sendMessage(String content) {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm");  
+        LocalDateTime now = LocalDateTime.now();  
+     
+        Message m = new Message(dtf.format(now) , MainController.loggedInUser.getUserID() , content);
+        conversation.add(m);
+        String text = m.toString();
     }
 
     public void saveToFile() {
-        String filePath = "src/Objects/Patients/" + getUserID() + ".txt";
+        String filePath = "src/Data/Patients/" + getUserID() + ".txt";
+        System.out.println("this worked");
         Path path = Path.of(filePath);
         File file = new File(filePath);
         String text = "" + 
@@ -193,31 +205,17 @@ public class Patient extends User{
 
         try {
             file.createNewFile();
+            file = new File("src/Data/Patients/" + getUserID() + "_visits.txt");
+            file.createNewFile();
             Files.writeString(path, text);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    // public void readFromFile() {
-    //      String filePath = "src/Objects/Patients/" + getUserID() + ".txt";
-    //     File filePath = new File("./Patients/");
-    //     File[] listingAllFiles = filePath.listFiles();
-
-    //     for (File file : listingAllFiles) {
-    //         if(file != null) {
-    //             String fileName = file.getName();
-    //             this.ID = fileName;
-
-                
-                
-    //         }
-    //     }
-    // }
-
     public void readFromFile() {
         try {
-            String filePath = "src/Objects/Patients/" + getUserID() + ".txt";
+            String filePath = "src/Data/Patients/" + getUserID() + ".txt";
 			List<String> allLines = Files.readAllLines(Paths.get(filePath));
 
             setFirstName(allLines.get(0));
@@ -241,5 +239,55 @@ public class Patient extends User{
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+    }
+
+    public void readVisits() {
+        try {
+            String filePath = "src/Data/Patients/" + getUserID() + "_visits.txt";
+            List<String> allLines = Files.readAllLines(Paths.get(filePath));
+        
+            String date;
+            String allergies;
+            String meds;
+            String notes;
+        
+            Visit v;
+        
+            
+            for (int i = 0 ; i <= allLines.size() - 2; i++) {
+                date = allLines.get(i++).substring(5);
+                allergies = allLines.get(i++).substring(11);
+                meds = allLines.get(i++).substring(12);
+                notes = allLines.get(i++).substring(7);
+                v = new Visit(date, allergies, meds, notes);
+                visitSummaries.add(v);
+            }
+        
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void readConversation() {
+        try {
+            String filePath = "src/Data/Patients/" + getUserID() + "_messages.txt";
+            List<String> allLines = Files.readAllLines(Paths.get(filePath));
+        
+            String time;
+            String sender;
+            String content;
+        
+            
+            for (int i = 0 ; i <= allLines.size() - 2; i++) {
+                sender = allLines.get(i++).substring(8);
+                time = allLines.get(i++).substring(6);
+                content = allLines.get(i++).substring(9);
+                Message m = new Message(time, sender, content);
+                conversation.add(m);
+            }
+        
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

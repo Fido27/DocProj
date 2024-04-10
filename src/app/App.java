@@ -17,7 +17,7 @@ public class App extends Application {
     
     public void start(Stage stage) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("../gui/godmode.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("../GUI/login.fxml"));
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();

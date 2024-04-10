@@ -4,14 +4,11 @@ public class User {
     String ID;
     USERTYPE USERTYPE;
 
-    public User(USERTYPE usertype , String username) {
-        this.USERTYPE = usertype;
-        this.ID = username;
-    }
+    public User() {}
 
-    protected User(String username) {
-        this.USERTYPE = Objects.USERTYPE.PATIENT;
-        this.ID = username;
+    public User(USERTYPE usertype , String id) {
+        this.USERTYPE = usertype;
+        this.ID = id;
     }
 
     public USERTYPE getUSERTYPE() {

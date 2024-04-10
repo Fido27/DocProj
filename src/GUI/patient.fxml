@@ -6,16 +6,16 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.patientController">
    <children>
-      <Label layoutX="96.0" layoutY="97.0" text="Patient's Name">
+      <Label fx:id="name" layoutX="96.0" layoutY="97.0" text="Patient's Name">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Button layoutX="237.0" layoutY="157.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="176.0" text="Personal Information" />
-      <Button layoutX="237.0" layoutY="200.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="176.0" text="Health Record" />
-      <Button layoutX="237.0" layoutY="242.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="176.0" text="Messages" />
+      <Button layoutX="237.0" layoutY="157.0" mnemonicParsing="false" onAction="#personalInfo" prefHeight="27.0" prefWidth="176.0" text="Personal Information" />
+      <Button layoutX="237.0" layoutY="200.0" mnemonicParsing="false" onAction="#record" prefHeight="27.0" prefWidth="176.0" text="Health Record" />
+      <Button layoutX="237.0" layoutY="242.0" mnemonicParsing="false" onAction="#message" prefHeight="27.0" prefWidth="176.0" text="Messages" />
       <ImageView fitHeight="27.0" fitWidth="126.0" layoutX="237.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@logo.jpeg" />

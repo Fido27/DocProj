@@ -1,11 +1,15 @@
-
-//this file holds everything needed for the message class
 package Objects;
 
 public class Message {
     String time;
     String sender;
     String content;
+
+    public Message(String time, String sender, String content) {
+        this.time = time;
+        this.sender = sender;
+        this.content = content;
+    }
 
     public String getTime() {
         return this.time;
@@ -32,6 +36,6 @@ public class Message {
     }
 
     public String toString(){
-        return ("Sender: " + sender + "\nTime: " + time + "\nContent: " + content);
+        return ("Sender: " + sender + "\nTime: " + time + "\nContent: " + content + "\n\n");
     }
 }

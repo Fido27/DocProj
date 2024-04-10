@@ -1,0 +1,16 @@
+Sender: metmal0527
+Time: 10:40
+Content: I have sent the medicines to the pharmacy
+
+Sender: johdoe0219
+Time: 10:16
+Content: I have asked the doctor to expedite the meds
+
+Sender: aarjai1027
+Time: 06:41
+Content: What is the status of my meds?
+
+Sender: aarjai1027
+Time: 06:41
+Content: Hi Doctor
+
