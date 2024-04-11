@@ -1,3 +1,5 @@
+
+//this file holds everything needed for the message class
 package Objects;
 
 public class Message {
